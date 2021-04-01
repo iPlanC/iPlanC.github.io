@@ -1,27 +1,27 @@
 <!--
  * @Author: PlanC
  * @Date: 2021-01-12 12:33:16
- * @LastEditTime: 2021-02-02 15:26:39
+ * @LastEditTime: 2021-04-01 15:37:52
  * @FilePath: \iplanc.github.io\index.html
 -->
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang='zh-CN'>
     <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <meta name="renderer" content="webkit"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-        <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+        <meta charset='utf-8'/>
+        <meta name='viewport' content='width=device-width'/>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'/>
+        <meta name='renderer' content='webkit'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'/>
+        <meta http-equiv='Access-Control-Allow-Origin' content='*'/>
 
-        <!-- <link rel="icon" href="gif_favicon.gif" type="image/gif" > -->
-        <link rel="icon" href="pngFavicon.png" type="image/png" >
-        <link rel="shortcut icon" href="icoFavicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="/Live2D/live2d/css/live2d.css" />
-        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        <script src="config.js" type=text/javascript></script>
+        <!-- <link rel='icon' href='gif_favicon.gif' type='image/gif' > -->
+        <link rel='icon' href='pngFavicon.png' type='image/png' >
+        <link rel='shortcut icon' href='icoFavicon.ico' type='image/x-icon' />
+        <link rel='stylesheet' href='/Live2D/live2d/css/live2d.css' />
+        <script src='https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js'></script>
+        <script async src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>
+        <script src='config.js' type=text/javascript></script>
 
         <title>Love Unii</title>
         <style>
@@ -76,24 +76,24 @@
     </head>
 
     <body>
-        <div class="content">
-            <h1><span id=down>『 <script src="pieces.js" type=text/javascript></script> 』</span></h1>
-            <h2><a id="lover"></a>，我们已经在一起了</h2>
-            <div class="timer"><b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds</div>
-            <span id="busuanzi_container_site_pv">已被 <span id="busuanzi_value_site_pv"></span> 人见证。</span><br/>
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=500 height=86 src="https://music.163.com/outchain/player?type=2&id=1345872140&height=66"></iframe>
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=500 height=86 src="https://music.163.com/outchain/player?type=2&id=1309853414&height=66"></iframe>
-            <div id="landlord">
-                <div class="message" style="opacity:0"></div>
-                <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-                <div class="hide-button">隐藏</div>
+        <div class='content'>
+            <h1><span id=down>『 <script src='pieces.js' type=text/javascript></script> 』</span></h1>
+            <h2><a id='lover'></a>，我们已经在一起了</h2>
+            <div class='timer'><b id='d'></b> Days <b id='h'></b> Hours <b id='m'></b> Minutes <b id='s'></b> Seconds</div>
+            <span id='busuanzi_container_site_pv'>已被 <span id='busuanzi_value_site_pv'></span> 人见证。</span><br/>
+            <iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=500 height=86 src='https://music.163.com/outchain/player?type=2&id=1345872140&height=66'></iframe>
+            <iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=500 height=86 src='https://music.163.com/outchain/player?type=2&id=1309853414&height=66'></iframe>
+            <div id='landlord'>
+                <div class='message' style='opacity:0'></div>
+                <canvas id='live2d' width='280' height='250' class='live2d'></canvas>
+                <div class='hide-button'>隐藏</div>
             </div>
-            <div id="achivements"></div>
+            <div id='achivements'></div>
         </div>
         <script>
-            document.getElementById("lover").innerHTML = lover;
+            document.getElementById('lover').innerHTML = lover;
             function timer() {
-                if (typeof end == "undefined") {
+                if (typeof end == 'undefined') {
                     var now = new Date() - start;
                 }
                 else {
@@ -102,16 +102,16 @@
 
                 var h = ~~(now / 1000 / 60 / 60 % 24);
                 if (h < 10) {
-                    h = "0" + h;
+                    h = '0' + h;
                 }
                 var m = ~~(now / 1000 / 60 % 60);
                 if (m < 10) {
-                    m = "0" + m;
+                    m = '0' + m;
                 }
 
                 var s = ~~(now / 1000 % 60);
                 if (s < 10) {
-                    s = "0" + s;
+                    s = '0' + s;
                 }
                 document.getElementById('d').innerHTML = ~~(now / 1000 / 60 / 60 / 24);
                 document.getElementById('h').innerHTML = h;
@@ -123,24 +123,24 @@
             setInterval(timer, 100);
         </script>
 
-        <div class="chart">
-            <svg class="line-chart"></svg>
-            <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1/dist/chart.xkcd.min.js"></script>
+        <div class='chart'>
+            <svg class='line-chart'></svg>
+            <script src='https://cdn.jsdelivr.net/npm/chart.xkcd@1.1/dist/chart.xkcd.min.js'></script>
             <script>
                 const svg = document.querySelector('.line-chart');
                 window.onload = function() {
                     var i = 0;
                     var date = new Date();
-                    var data = [0, 300 + Math.floor(Math.random() * 30), 0, 0, 0, 0, 0, 0, 0, document.getElementById("busuanzi_value_site_pv").innerHTML];
+                    var data = [0, 300 + Math.floor(Math.random() * 30), 0, 0, 0, 0, 0, 0, 0, document.getElementById('busuanzi_value_site_pv').innerHTML];
                     for (i = 2; i < 9; i++) {
                         data[i] = data[i - 1] + Math.floor(Math.random() * 10) + Math.floor(Math.random() * 10) + Math.floor(Math.random() * 10);
                     }
                     var config = {
-                        title: 'PlanC 💕 Unii',
+                        title: '',
                         xLabel: '📅 Date',
                         yLabel: '👀 Viewers',
                         data: {
-                            labels: ["2020/11/11", date.getDate() - 8, date.getDate() - 7, date.getDate() - 6, date.getDate() - 5, date.getDate() - 4, date.getDate() - 3, date.getDate() - 2, date.getDate() - 1, date.toLocaleDateString()],
+                            labels: ['', date.getDate() - 8, date.getDate() - 7, date.getDate() - 6, date.getDate() - 5, date.getDate() - 4, date.getDate() - 3, date.getDate() - 2, date.getDate() - 1, date.toLocaleDateString()],
                             datasets: [{
                                 label: 'view',
                                 data: data,
@@ -149,23 +149,25 @@
                         options: {
                             yTickCount: 10,
                             legendPosition: chartXkcd.config.positionType.upLeft,
-                            backgroundColor: "#00000000",
+                            backgroundColor: '#00000000',
                         }
                     };
+                    config.title = meNickName + '💕' + loverNickName;
+                    config.data.labels[0] = start;
 
                     const lineChart = new chartXkcd.Line(svg, config);
                 }
             </script>
         </div>
 
-        <script type="text/javascript">
+        <script type='text/javascript'>
             var message_Path = '/Live2D/live2d/';
             var home_Path = 'https://iplanc.github.io/';
         </script>
-        <script type="text/javascript" src="/Live2D/live2d/js/live2d.js"></script>
-        <script type="text/javascript" src="/Live2D/live2d/js/message.js"></script>
-        <script type="text/javascript">
-            loadlive2d("live2d", "/Live2D/live2d/model/tia/model.json");
+        <script type='text/javascript' src='/Live2D/live2d/js/live2d.js'></script>
+        <script type='text/javascript' src='/Live2D/live2d/js/message.js'></script>
+        <script type='text/javascript'>
+            loadlive2d('live2d', '/Live2D/live2d/model/tia/model.json');
         </script>
     </body>
 </html>
